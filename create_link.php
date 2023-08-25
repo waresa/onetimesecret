@@ -40,9 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a href='<?php echo $linkUrl ?>'><?php echo $linkUrl ?></a><br><br>
                 <br>
                 <div id='copyFeedback' style='display: none;'></div>
-                <button class='button' onclick='copyLink()'>
+                <!-- <button class='button' onclick='copyLink()'>
                     Copy Link
-                </button>
+                </button> -->
                 <br><br>
                 <button class='button' onclick='goBack()'>
                     Go Back

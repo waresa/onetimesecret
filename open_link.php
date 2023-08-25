@@ -30,10 +30,10 @@ if (isset($_GET['id'])) {
                 <div>
                 <h2>Decrypted Text</h2>
                 <textarea id='message' readonly>$decryptedText</textarea>
-                <button class='button' onclick='copyMessage()'>Copy</button>
-                <br>";
+                <!-- <button class='button' onclick='copyMessage()'>Copy</button> -->
+                <br>
                 <button class='button' onclick='window.location.href=\"index.php\"'>Burn</button>
-                </div>";
+                </div>
                 <?php
                 $redis->del($linkId);
             } else {
