@@ -49,6 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </button>
             </div>
         </body>
+        <script src="script.js"></script>
+    <?php
+?>    
     <?php
 }
 ?>

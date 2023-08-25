@@ -25,15 +25,16 @@ if (isset($_GET['id'])) {
             // Decrypt the text using the provided password
             $decryptedText = decryptText($encryptedText, $password);
 
-            if ($decryptedText !== false) {
-                echo "<br><br>";
-                echo "<div>";
-                echo "<h2>Decrypted Text</h2>";
-                echo "<textarea readonly>$decryptedText</textarea>";
-                echo "<button class='button' onclick='copyText()'>Copy</button>";
-                echo "<br>";
-                echo "<button class='button' onclick='window.location.href=\"index.php\"'>Burn</button>";
-                echo "</div>";
+            if ($decryptedText !== false) { ?>
+                <br><br>
+                <div>
+                <h2>Decrypted Text</h2>
+                <textarea id='message' readonly>$decryptedText</textarea>
+                <button class='button' onclick='copyMessage()'>Copy</button>
+                <br>";
+                <button class='button' onclick='window.location.href=\"index.php\"'>Burn</button>
+                </div>";
+                <?php
                 $redis->del($linkId);
             } else {
                 echo "<h2>Invalid password</h2>";
