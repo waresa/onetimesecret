@@ -62,3 +62,4 @@ if (isset($_GET['id'])) {
     echo "</div>";
 }
 ?>
+<script>src="script.js"</script>
