@@ -13,7 +13,12 @@ $redisPort = 14030;
 $redisPassword = 'xuvW6m2U0866ZHTx9a0CqB60OEB5oXrK';
 
 // Connect to Redis server
-$redis = new Redis();
+$redis = new Client([
+    'scheme' => 'tcp',
+    'host' => $redisHost,
+    'port' => $redisPort,
+    'password' => $redisPassword,
+]);
 $redis->connect($redisHost, $redisPort);
 if (!empty($redisPassword)) {
     $redis->auth($redisPassword);
