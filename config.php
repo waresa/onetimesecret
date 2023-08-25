@@ -4,6 +4,9 @@
 // Include composer files
 require_once 'vendor/autoload.php';
 
+use Predis\Client;
+
+
 // Redis configuration
 $redisHost = 'redis-14030.c2.eu-west-1-3.ec2.cloud.redislabs.com';
 $redisPort = 14030;
