@@ -1,4 +1,5 @@
 <?php
+echo "<br><br>";
 require_once 'config.php';
 require_once 'redis.php';
 require_once 'encryption.php';
